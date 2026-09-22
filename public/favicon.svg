@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="artisanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C87A5B" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#708A81" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#FAF6F0" />
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#artisanGrad)" stroke-width="3" />
+  <path d="M32 16 L35 27 L46 27 L37 34 L40 45 L32 38 L24 45 L27 34 L18 27 L29 27 Z" fill="#C87A5B" />
+  <circle cx="44" cy="20" r="3" fill="#D4AF37" />
+</svg>
