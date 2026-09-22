@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, Heart, ShieldCheck, Truck, Star } from 'lucide-react';
+import { ArrowRight, Heart, ShieldCheck, Truck, Star, Flower2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/catalog';
 
 export default function Hero({ onExploreClick, onCustomOrderClick }) {
@@ -43,7 +43,6 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
                 onClick={onCustomOrderClick}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-artisan-terracotta hover:bg-artisan-terracotta-dark text-white font-medium text-sm sm:text-base shadow-soft hover:shadow-card-hover transition-all transform hover:-translate-y-0.5"
               >
-                <Sparkles className="w-4 h-4 text-artisan-gold-light" />
                 <span>Create Something Custom</span>
                 <ArrowRight className="w-4 h-4 text-white/90" />
               </button>
@@ -112,7 +111,7 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
                       className="bg-artisan-terracotta text-white p-2.5 rounded-xl hover:bg-artisan-terracotta-dark transition-colors shrink-0 shadow-sm"
                       title="Customize this"
                     >
-                      <Sparkles className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -121,7 +120,7 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
               {/* Floating Badge 1: Top Right */}
               <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-soft border border-artisan-border hidden sm:flex items-center gap-3 animate-float-slow">
                 <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
-                  <Sparkles className="w-5 h-5 text-artisan-gold" />
+                  <Flower2 className="w-5 h-5 text-artisan-gold" />
                 </div>
                 <div>
                   <p className="text-xs font-bold text-artisan-charcoal">Preserved Floral Art</p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, MessageCircle, Sparkles, Clock, CheckCircle2, ShieldCheck, Heart, Share2 } from 'lucide-react';
+import { X, MessageCircle, Clock, CheckCircle2, ShieldCheck, Heart, Share2 } from 'lucide-react';
 import { generateProductInquiry } from '../utils/whatsapp';
 
 export default function ProductDetailModal({ product, isOpen, onClose, onCustomStudioOpen }) {
@@ -150,7 +150,6 @@ export default function ProductDetailModal({ product, isOpen, onClose, onCustomS
                   }}
                   className="flex-1 py-2.5 px-3 rounded-xl border border-artisan-border hover:bg-artisan-cream text-xs font-medium text-artisan-charcoal flex items-center justify-center gap-1.5 transition-colors"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-artisan-terracotta" />
                   <span>Custom Studio Wizard</span>
                 </button>
 

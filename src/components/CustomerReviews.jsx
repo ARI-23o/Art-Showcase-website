@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Sparkles, MessageSquareHeart } from 'lucide-react';
+import { Heart, MessageSquareHeart } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/catalog';
 
 export default function CustomerReviews() {
@@ -36,7 +36,6 @@ export default function CustomerReviews() {
           </p>
 
           <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-artisan-cream border border-artisan-border text-xs text-artisan-muted">
-            <Sparkles className="w-3.5 h-3.5 text-artisan-terracotta" />
             <span>Demo Placeholder • Ready to integrate 3–5 customer highlights</span>
           </div>
         </div>

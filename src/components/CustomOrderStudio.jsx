@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
   ArrowRight, 
   ArrowLeft, 
   Check, 
@@ -122,7 +121,6 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-artisan-terracotta-light text-artisan-terracotta border border-artisan-terracotta/20 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Custom Order Studio</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-bold text-artisan-charcoal leading-tight">

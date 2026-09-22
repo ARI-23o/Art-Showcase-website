@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FinalCTA({ onCustomOrderClick }) {
@@ -12,7 +12,6 @@ export default function FinalCTA({ onCustomOrderClick }) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
         
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-artisan-border text-xs font-semibold text-artisan-terracotta shadow-sm">
-          <Sparkles className="w-3.5 h-3.5" />
           <span>Bespoke Handcrafted Keepsakes</span>
         </div>
 
@@ -29,7 +28,6 @@ export default function FinalCTA({ onCustomOrderClick }) {
             onClick={onCustomOrderClick}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-artisan-terracotta hover:bg-artisan-terracotta-dark text-white font-semibold text-sm sm:text-base shadow-soft hover:shadow-card-hover transition-all transform hover:-translate-y-0.5"
           >
-            <Sparkles className="w-4 h-4 text-artisan-gold-light" />
             <span>Start Your Custom Order</span>
             <ArrowRight className="w-4 h-4" />
           </button>

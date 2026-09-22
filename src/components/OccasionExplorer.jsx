@@ -1,6 +1,6 @@
 import React from 'react';
 import { OCCASIONS } from '../data/catalog';
-import { Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function OccasionExplorer({ activeOccasion, onSelectOccasion, onCustomOrderClick }) {
   return (
@@ -70,7 +70,7 @@ export default function OccasionExplorer({ activeOccasion, onSelectOccasion, onC
             className="text-artisan-terracotta font-medium hover:underline inline-flex items-center gap-1"
           >
             <span>Tell Yukti your custom theme</span>
-            <Sparkles className="w-3 h-3" />
+            <ArrowRight className="w-3 h-3" />
           </button>
         </div>
 

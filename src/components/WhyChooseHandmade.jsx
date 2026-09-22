@@ -1,11 +1,11 @@
 import React from 'react';
-import { Heart, Sparkles, MessageCircle, Palette, CheckCircle2 } from 'lucide-react';
+import { Heart, Layers, MessageCircle, Palette, CheckCircle2 } from 'lucide-react';
 
 const REASONS = [
   {
     title: "Personalized",
     description: "Designed around your story, names, and meaningful moments.",
-    icon: Sparkles
+    icon: Layers
   },
   {
     title: "Made to Order",

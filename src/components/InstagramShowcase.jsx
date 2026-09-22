@@ -1,6 +1,6 @@
 import React from 'react';
 import { INSTAGRAM_POSTS, BUSINESS_INFO } from '../data/catalog';
-import { ArrowUpRight, Heart, Sparkles, Camera } from 'lucide-react';
+import { ArrowUpRight, Heart, Camera } from 'lucide-react';
 
 function InstagramIcon({ className = "w-4 h-4" }) {
   return (
@@ -48,7 +48,7 @@ export default function InstagramShowcase() {
         <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-white border border-artisan-border shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-start gap-3.5">
             <div className="w-10 h-10 rounded-2xl bg-artisan-terracotta-light flex items-center justify-center text-artisan-terracotta shrink-0 mt-0.5">
-              <Sparkles className="w-5 h-5" />
+              <Camera className="w-5 h-5" />
             </div>
             <div>
               <h3 className="font-serif text-base sm:text-lg font-bold text-artisan-charcoal">

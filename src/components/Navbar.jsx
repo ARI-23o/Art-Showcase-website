@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, MessageCircle, Heart, ArrowRight } from 'lucide-react';
+import { Menu, X, MessageCircle, Heart, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/catalog';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
@@ -71,7 +71,6 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
               <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-artisan-charcoal group-hover:text-artisan-terracotta transition-colors">
                 HandiCrafts <span className="font-serif italic font-normal text-artisan-terracotta">by Yukti</span>
               </span>
-              <Sparkles className="w-4 h-4 text-artisan-gold opacity-80 group-hover:rotate-12 transition-transform" />
             </div>
             <span className="text-[10px] tracking-widest uppercase font-medium text-artisan-muted">
               Personalized Art & Keepsakes
@@ -96,7 +95,7 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
               onClick={() => handleNavClick('creations')} 
               className="hover:text-artisan-terracotta transition-colors"
             >
-              Best Sellers
+              Featured
             </button>
             <button 
               onClick={() => handleNavClick('process')} 
@@ -137,7 +136,6 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
               onClick={onOpenCustomStudio}
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium bg-artisan-terracotta hover:bg-artisan-terracotta-dark text-white px-4 py-2 sm:py-2.5 rounded-full shadow-sm hover:shadow-soft transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <Sparkles className="w-3.5 h-3.5 text-artisan-gold-light" />
               <span>Start Custom Order</span>
             </button>
 
@@ -208,7 +206,6 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
                 }}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-artisan-terracotta text-white font-medium shadow-sm"
               >
-                <Sparkles className="w-4 h-4 text-artisan-gold-light" />
                 <span>Start Custom Order Wizard</span>
               </button>
               <a

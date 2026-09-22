@@ -1,6 +1,6 @@
 import React from 'react';
 import { PRODUCTS, OCCASIONS } from '../data/catalog';
-import { Sparkles, MessageCircle, Eye, ArrowRight, FilterX } from 'lucide-react';
+import { MessageCircle, Eye, ArrowRight, FilterX } from 'lucide-react';
 import { generateProductInquiry } from '../utils/whatsapp';
 
 export default function FeaturedCreations({
@@ -27,7 +27,6 @@ export default function FeaturedCreations({
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10">
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-artisan-terracotta mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
               <span>Handcrafted Portfolio</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-artisan-charcoal">

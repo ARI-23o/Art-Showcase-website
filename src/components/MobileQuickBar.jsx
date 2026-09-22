@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, MessageCircle } from 'lucide-react';
+import { MessageCircle, Palette } from 'lucide-react';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
 export default function MobileQuickBar({ onCustomOrderClick }) {
@@ -10,7 +10,7 @@ export default function MobileQuickBar({ onCustomOrderClick }) {
         onClick={onCustomOrderClick}
         className="flex-1 flex items-center justify-center gap-2 py-3 px-3 rounded-2xl bg-artisan-terracotta text-white font-semibold text-xs shadow-sm active:scale-95 transition-transform"
       >
-        <Sparkles className="w-4 h-4 text-artisan-gold-light" />
+        <Palette className="w-4 h-4 text-white" />
         <span>Custom Order</span>
       </button>
 

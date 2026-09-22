@@ -1,6 +1,6 @@
 import React from 'react';
 import { CRAFTING_STEPS } from '../data/catalog';
-import { Sparkles, ArrowRight, MessageSquare, Palette, HeartHandshake, Package } from 'lucide-react';
+import { ArrowRight, MessageSquare, Palette, HeartHandshake, Package } from 'lucide-react';
 
 const STEP_ICONS = [
   MessageSquare,
@@ -30,7 +30,7 @@ export default function CraftingProcess({ onCustomOrderClick }) {
         {/* 4 Step Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
           {CRAFTING_STEPS.map((stepItem, index) => {
-            const IconComp = STEP_ICONS[index] || Sparkles;
+            const IconComp = STEP_ICONS[index] || MessageSquare;
             return (
               <div
                 key={stepItem.step}
@@ -73,9 +73,8 @@ export default function CraftingProcess({ onCustomOrderClick }) {
             onClick={onCustomOrderClick}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-artisan-cream hover:bg-artisan-sand text-artisan-charcoal border border-artisan-border text-xs sm:text-sm font-medium transition-all"
           >
-            <Sparkles className="w-4 h-4 text-artisan-terracotta" />
             <span>Ready to start step 01? Click here to share your idea</span>
-            <ArrowRight className="w-4 h-4 text-artisan-muted" />
+            <ArrowRight className="w-4 h-4 text-artisan-terracotta" />
           </button>
         </div>
 

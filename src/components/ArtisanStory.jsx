@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Heart, Flower2, Shield, ArrowRight } from 'lucide-react';
+import { Heart, Flower2, Shield, ArrowRight } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/catalog';
 
 export default function ArtisanStory({ onCustomOrderClick }) {
@@ -39,7 +39,7 @@ export default function ArtisanStory({ onCustomOrderClick }) {
           <div className="lg:col-span-7 space-y-6">
             
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-artisan-terracotta">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Flower2 className="w-3.5 h-3.5" />
               <span>The Artisan Behind The Craft</span>
             </div>
 

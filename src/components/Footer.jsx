@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, MessageCircle, Heart, MapPin, Truck, Mail } from 'lucide-react';
+import { MessageCircle, Heart, MapPin, Truck, Mail, ArrowRight, Flower2 } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/catalog';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
@@ -26,7 +26,6 @@ export default function Footer({ onNavigateSection, onCustomOrderClick }) {
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
                 HandiCrafts <span className="font-serif italic font-normal text-artisan-terracotta-light">by Yukti</span>
               </span>
-              <Sparkles className="w-4 h-4 text-artisan-gold" />
             </div>
             
             <p className="text-xs sm:text-sm text-gray-300 max-w-sm leading-relaxed font-light">
@@ -131,7 +130,7 @@ export default function Footer({ onNavigateSection, onCustomOrderClick }) {
             </h4>
             <div className="space-y-2 text-gray-400">
               <p className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-artisan-terracotta shrink-0" />
+                <Flower2 className="w-4 h-4 text-artisan-terracotta shrink-0" />
                 <span>Personalized Custom Art</span>
               </p>
               <p className="flex items-center gap-2">
@@ -148,8 +147,8 @@ export default function Footer({ onNavigateSection, onCustomOrderClick }) {
               onClick={onCustomOrderClick}
               className="mt-2 w-full py-2.5 px-4 rounded-xl bg-artisan-terracotta hover:bg-artisan-terracotta-dark text-white font-medium text-xs shadow-sm transition-colors flex items-center justify-center gap-1.5"
             >
-              <Sparkles className="w-3.5 h-3.5" />
               <span>Custom Studio Wizard</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 

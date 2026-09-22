@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, ChevronRight, Sparkles, Heart } from 'lucide-react';
+import { MessageCircle, X, ChevronRight, Heart } from 'lucide-react';
 import { WHATSAPP_QUICK_ACTIONS, BUSINESS_INFO } from '../data/catalog';
 import { createWhatsAppUrl } from '../utils/whatsapp';
 
