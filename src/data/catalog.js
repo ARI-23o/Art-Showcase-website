@@ -5,8 +5,8 @@ export const BUSINESS_INFO = {
   tagline: "Personalized Art, Gifts & Handmade Creations",
   instagram: "https://www.instagram.com/handicrafts_by_yukti",
   instagramHandle: "@handicrafts_by_yukti",
-  whatsappNumber: "+919876543210", // Demo WhatsApp number
-  formattedPhone: "+91 98765 43210",
+  whatsappNumber: "+919969922275",
+  formattedPhone: "+91 99699 22275",
   location: "New Delhi, India",
   shipping: "Pan-India Safe Delivery",
   followerCount: "15K+",

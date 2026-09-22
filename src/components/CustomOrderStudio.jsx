@@ -424,7 +424,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                     </label>
                     <input
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 99699 22275"
                       value={orderData.whatsappNumber}
                       onChange={(e) => handleFieldChange('whatsappNumber', e.target.value)}
                       className="w-full text-xs sm:text-sm px-4 py-2.5 rounded-xl border border-artisan-border focus:outline-none focus:border-artisan-terracotta bg-white"
