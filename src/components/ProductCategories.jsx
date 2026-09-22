@@ -63,9 +63,6 @@ export default function ProductCategories({ onSelectCategory, onCustomOrderClick
               {/* Text content */}
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between text-xs text-artisan-muted mb-1">
-                    <span>{cat.count}</span>
-                  </div>
                   <h3 className="font-serif text-lg sm:text-xl font-bold text-artisan-charcoal group-hover:text-artisan-terracotta transition-colors">
                     {cat.title}
                   </h3>

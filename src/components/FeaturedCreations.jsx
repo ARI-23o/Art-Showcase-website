@@ -97,15 +97,6 @@ export default function FeaturedCreations({
                       {product.badge}
                     </span>
                   </div>
-
-                  {/* Rating Tag */}
-                  {product.rating && (
-                    <div className="absolute top-3 right-3">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                        ★ {product.rating}
-                      </span>
-                    </div>
-                  )}
                 </div>
 
                 {/* Card Content */}
