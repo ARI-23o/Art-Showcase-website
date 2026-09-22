@@ -30,7 +30,7 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
             <div className="flex items-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-artisan-terracotta animate-pulse"></span>
               <span>
-                <strong className="text-artisan-charcoal font-medium">Concept Website Preview</strong> crafted for {BUSINESS_INFO.instagramHandle}
+                <strong className="text-artisan-charcoal font-medium">CONCEPT WEBSITE</strong> — A digital experience created for HandiCrafts by Yukti
               </span>
             </div>
             <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
                 rel="noreferrer" 
                 className="text-artisan-terracotta hover:underline font-medium hidden sm:inline"
               >
-                Visit Instagram Profile →
+                View Instagram Profile →
               </a>
               <button 
                 onClick={() => setShowDemoBanner(false)}

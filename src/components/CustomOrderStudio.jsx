@@ -577,11 +577,18 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
             <div className="p-3.5 rounded-2xl bg-artisan-cream border border-artisan-border/70 text-xs space-y-1 mb-5">
               <div className="flex items-center gap-1.5 font-semibold text-artisan-charcoal">
                 <Clock className="w-3.5 h-3.5 text-artisan-terracotta" />
-                <span>Estimated Crafting & Curing:</span>
+                <span>Crafting Timeline:</span>
               </div>
               <p className="text-[11px] text-artisan-muted">
-                5–8 business days • Handcrafted in Delhi & safely couriered pan-India.
+                Made to Order • Exact crafting & curing schedule discussed on WhatsApp.
               </p>
+            </div>
+
+            {/* Custom Request Ready status */}
+            <div className="text-center pb-3">
+              <span className="text-xs font-semibold text-artisan-terracotta">
+                Your custom request is ready ✨
+              </span>
             </div>
 
             {/* Big Send to WhatsApp Button */}
@@ -593,9 +600,14 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
               <span>SEND TO WHATSAPP</span>
             </button>
 
-            <div className="flex items-center justify-center gap-1 text-[11px] text-artisan-muted text-center mt-3">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Instant direct WhatsApp chat with Yukti</span>
+            <div className="space-y-1 text-center mt-3">
+              <p className="text-[11px] text-artisan-muted">
+                💡 You'll be able to attach your reference image directly in WhatsApp.
+              </p>
+              <div className="flex items-center justify-center gap-1 text-[10px] text-artisan-muted">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Direct WhatsApp consultation with Yukti</span>
+              </div>
             </div>
           </div>
 

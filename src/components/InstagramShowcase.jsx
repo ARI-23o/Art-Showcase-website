@@ -18,7 +18,7 @@ export default function InstagramShowcase() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10">
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-artisan-terracotta mb-2">
               <InstagramIcon className="w-4 h-4" />
@@ -28,7 +28,7 @@ export default function InstagramShowcase() {
               See More Of Our Creations
             </h2>
             <p className="text-sm text-artisan-muted mt-2 max-w-xl">
-              Join over {BUSINESS_INFO.followerCount} craft lovers exploring behind-the-scenes resin casting, flower preservation reels, and new studio designs.
+              Explore recent handcrafted resin designs, floral preservation, and behind-the-scenes artistry from our studio.
             </p>
           </div>
 
@@ -42,6 +42,26 @@ export default function InstagramShowcase() {
             <span>Follow {BUSINESS_INFO.instagramHandle}</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
+        </div>
+
+        {/* Pitch Banner: Your Instagram, Turned Into a Storefront */}
+        <div className="mb-8 p-5 sm:p-6 rounded-3xl bg-white border border-artisan-border shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3.5">
+            <div className="w-10 h-10 rounded-2xl bg-artisan-terracotta-light flex items-center justify-center text-artisan-terracotta shrink-0 mt-0.5">
+              <Sparkles className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="font-serif text-base sm:text-lg font-bold text-artisan-charcoal">
+                Your Instagram, Turned Into a Storefront.
+              </h3>
+              <p className="text-xs sm:text-sm text-artisan-muted mt-0.5 max-w-2xl leading-relaxed">
+                Your customers already discover your work on Instagram. This concept shows how those visitors could explore your creations, understand your custom-order process, and send structured WhatsApp orders in just a few clicks.
+              </p>
+            </div>
+          </div>
+          <div className="shrink-0 flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-artisan-cream text-artisan-terracotta border border-artisan-border">
+            <span>15K+ Community Concept</span>
+          </div>
         </div>
 
         {/* Gallery Grid */}

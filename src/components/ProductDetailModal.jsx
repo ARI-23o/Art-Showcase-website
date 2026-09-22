@@ -55,11 +55,6 @@ export default function ProductDetailModal({ product, isOpen, onClose, onCustomS
               <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-artisan-charcoal shadow-sm">
                 {product.badge}
               </span>
-              {product.rating && (
-                <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-amber-500 text-white shadow-sm self-start">
-                  ★ {product.rating} Rating
-                </span>
-              )}
             </div>
           </div>
 
@@ -88,7 +83,7 @@ export default function ProductDetailModal({ product, isOpen, onClose, onCustomS
                 </div>
                 <div className="text-right">
                   <span className="text-[10px] uppercase font-semibold text-artisan-muted block">
-                    Standard Size
+                    Dimensions
                   </span>
                   <span className="text-xs font-semibold text-artisan-charcoal">
                     {product.dimensions}
@@ -119,7 +114,7 @@ export default function ProductDetailModal({ product, isOpen, onClose, onCustomS
               {/* Turnaround Time */}
               <div className="flex items-center gap-2 text-xs text-artisan-muted pt-1">
                 <Clock className="w-3.5 h-3.5 text-artisan-terracotta" />
-                <span>Crafting & Curing Time: <strong>{product.craftTime}</strong></span>
+                <span>Production: <strong>{product.craftTime}</strong></span>
               </div>
 
               {/* Custom Request Note Input */}

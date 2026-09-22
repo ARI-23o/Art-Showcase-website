@@ -62,22 +62,21 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
                 <div className="flex items-center justify-center lg:justify-start gap-1 text-artisan-terracotta font-serif text-lg sm:text-xl font-bold">
                   <span>{BUSINESS_INFO.followerCount}</span>
                 </div>
-                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Instagram Family</p>
+                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Instagram Community</p>
               </div>
 
               <div>
                 <div className="flex items-center justify-center lg:justify-start gap-1 text-artisan-charcoal font-serif text-lg sm:text-xl font-bold">
-                  <Star className="w-4 h-4 text-amber-500 fill-amber-400 inline" />
-                  <span>{BUSINESS_INFO.rating}</span>
+                  <span>Personalized</span>
                 </div>
-                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Customer Rating</p>
+                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Custom Creations</p>
               </div>
 
               <div>
                 <div className="flex items-center justify-center lg:justify-start gap-1 text-artisan-charcoal font-serif text-lg sm:text-xl font-bold">
-                  <span>100%</span>
+                  <span>Made to Order</span>
                 </div>
-                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Handcrafted in India</p>
+                <p className="text-[11px] sm:text-xs text-artisan-muted mt-0.5">Individual Handcraft</p>
               </div>
             </div>
 
@@ -125,8 +124,8 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
                   <Sparkles className="w-5 h-5 text-artisan-gold" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-artisan-charcoal">Real Preserved Flowers</p>
-                  <p className="text-[10px] text-artisan-muted">Sealed for a Lifetime</p>
+                  <p className="text-xs font-bold text-artisan-charcoal">Preserved Floral Art</p>
+                  <p className="text-[10px] text-artisan-muted">Custom Keepsakes</p>
                 </div>
               </div>
 
@@ -136,8 +135,8 @@ export default function Hero({ onExploreClick, onCustomOrderClick }) {
                   <ShieldCheck className="w-5 h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-artisan-charcoal">Pan-India Safe Delivery</p>
-                  <p className="text-[10px] text-artisan-muted">Custom Bubble Packaged</p>
+                  <p className="text-xs font-bold text-artisan-charcoal">Direct WhatsApp Chat</p>
+                  <p className="text-[10px] text-artisan-muted">Personalized Consultation</p>
                 </div>
               </div>
 

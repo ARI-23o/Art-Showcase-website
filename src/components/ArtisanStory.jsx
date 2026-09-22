@@ -63,20 +63,20 @@ export default function ArtisanStory({ onCustomOrderClick }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div className="p-4 rounded-2xl bg-white border border-artisan-border">
                 <Heart className="w-5 h-5 text-artisan-terracotta mb-2" />
-                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Pure Craftsmanship</h4>
-                <p className="text-[11px] text-artisan-muted mt-0.5">No factory shortcuts. Hand-poured and polished.</p>
+                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Artisanal Dedication</h4>
+                <p className="text-[11px] text-artisan-muted mt-0.5">Every creation is individually designed and handcrafted.</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white border border-artisan-border">
                 <Flower2 className="w-5 h-5 text-artisan-sage mb-2" />
-                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Archival Quality</h4>
-                <p className="text-[11px] text-artisan-muted mt-0.5">UV-resistant resin to prevent yellowing over time.</p>
+                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Preserved Florals</h4>
+                <p className="text-[11px] text-artisan-muted mt-0.5">Carefully dehydrated botanicals encased in crystal resin.</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white border border-artisan-border">
                 <Shield className="w-5 h-5 text-artisan-gold mb-2" />
-                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Pan-India Care</h4>
-                <p className="text-[11px] text-artisan-muted mt-0.5">Shock-proof custom packaging for 100% safe transit.</p>
+                <h4 className="font-serif text-sm font-bold text-artisan-charcoal">Personalized For You</h4>
+                <p className="text-[11px] text-artisan-muted mt-0.5">Tailored names, dates, quotes, and custom color themes.</p>
               </div>
             </div>
 

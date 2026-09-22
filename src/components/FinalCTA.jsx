@@ -46,7 +46,7 @@ export default function FinalCTA({ onCustomOrderClick }) {
         </div>
 
         <p className="text-[11px] text-artisan-muted pt-3">
-          Handcrafted in Delhi • Shipped with love across India • Average response in &lt;1 hour
+          Personalized resin & floral art • Made with love • Direct WhatsApp consultation
         </p>
 
       </div>

@@ -28,13 +28,13 @@ export default function FeaturedCreations({
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-artisan-terracotta mb-2">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Flagship Art Portfolio</span>
+              <span>Handcrafted Portfolio</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-artisan-charcoal">
-              Best Selling Creations
+              Featured Creations
             </h2>
             <p className="text-sm text-artisan-muted mt-2 max-w-xl">
-              Each piece is custom designed with real botanicals, gold leaf accents, and crystal clear resin.
+              Each piece is individually handcrafted to order with real botanicals, gold leaf accents, and crystal clear resin.
             </p>
           </div>
 

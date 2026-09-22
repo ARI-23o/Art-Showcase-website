@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import OccasionExplorer from './components/OccasionExplorer';
 import ProductCategories from './components/ProductCategories';
 import FeaturedCreations from './components/FeaturedCreations';
+import WhyChooseHandmade from './components/WhyChooseHandmade';
 import ProductDetailModal from './components/ProductDetailModal';
 import CustomOrderStudio from './components/CustomOrderStudio';
 import CraftingProcess from './components/CraftingProcess';
@@ -83,7 +84,7 @@ export default function App() {
           onCustomOrderClick={() => handleOpenCustomStudio()}
         />
 
-        {/* 5. Featured Creations / Best Sellers */}
+        {/* 5. Featured Creations */}
         <FeaturedCreations
           activeOccasion={activeOccasion}
           activeCategory={activeCategory}
@@ -92,7 +93,12 @@ export default function App() {
           onCustomStudioOpen={handleOpenCustomStudio}
         />
 
-        {/* 6. ⭐ Custom Order Studio (The Hero Sales Feature) */}
+        {/* 6. Why Choose a Handmade Creation? */}
+        <WhyChooseHandmade
+          onCustomOrderClick={() => handleOpenCustomStudio()}
+        />
+
+        {/* 7. ⭐ Custom Order Studio (The Hero Sales Feature) */}
         <CustomOrderStudio
           preselectedProduct={customStudioProduct}
         />

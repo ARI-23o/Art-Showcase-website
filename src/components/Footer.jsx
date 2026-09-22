@@ -131,12 +131,12 @@ export default function Footer({ onNavigateSection, onCustomOrderClick }) {
             </h4>
             <div className="space-y-2 text-gray-400">
               <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-artisan-terracotta shrink-0" />
-                <span>{BUSINESS_INFO.location}</span>
+                <Sparkles className="w-4 h-4 text-artisan-terracotta shrink-0" />
+                <span>Personalized Custom Art</span>
               </p>
               <p className="flex items-center gap-2">
-                <Truck className="w-4 h-4 text-artisan-sage shrink-0" />
-                <span>{BUSINESS_INFO.shipping}</span>
+                <MessageCircle className="w-4 h-4 text-artisan-sage shrink-0" />
+                <span>Direct WhatsApp Consultation</span>
               </p>
               <p className="flex items-center gap-2">
                 <InstagramIcon className="w-4 h-4 text-artisan-gold shrink-0" />
