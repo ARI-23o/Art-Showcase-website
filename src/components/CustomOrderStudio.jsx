@@ -10,17 +10,20 @@ import {
   Heart, 
   ShieldCheck, 
   HelpCircle,
-  Clock
+  Clock,
+  Layers,
+  Palette,
+  Gift
 } from 'lucide-react';
 import { generateCustomOrderMessage } from '../utils/whatsapp';
 
 const PRODUCT_TYPES = [
-  { id: 'Name Plate', label: 'Personalized Name Plate', icon: '🏠', desc: 'Entrance & door family names' },
-  { id: 'Wedding Frame', label: 'Wedding Frame', icon: '💍', desc: 'Couple photo & vows in resin' },
-  { id: 'Varmala Preservation', label: 'Varmala Preservation', icon: '🌸', desc: 'Real wedding garland keepsake' },
-  { id: 'Resin Clock', label: 'Resin Wall Clock', icon: '🕒', desc: 'Ocean wave or marble geode clock' },
-  { id: 'Hamper', label: 'Curated Gift Hamper', icon: '🎁', desc: 'Festive & wedding favors bundle' },
-  { id: 'Something Else', label: 'Something Else / Custom Idea', icon: '✨', desc: 'Trays, coasters, tables, etc.' },
+  { id: 'Name Plate', label: 'Personalized Name Plate', desc: 'Entrance & door family names' },
+  { id: 'Wedding Frame', label: 'Wedding Frame', desc: 'Couple photo & vows in resin' },
+  { id: 'Varmala Preservation', label: 'Varmala Preservation', desc: 'Real wedding garland keepsake' },
+  { id: 'Resin Clock', label: 'Resin Wall Clock', desc: 'Ocean wave or marble geode clock' },
+  { id: 'Hamper', label: 'Curated Gift Hamper', desc: 'Festive & wedding favors bundle' },
+  { id: 'Something Else', label: 'Something Else / Custom Idea', desc: 'Trays, coasters, tables, etc.' },
 ];
 
 const OCCASIONS_LIST = [
@@ -34,11 +37,11 @@ const OCCASIONS_LIST = [
 ];
 
 const SHAPES = [
-  { id: 'Arch', label: 'Elegant Arch', desc: 'Curved top aesthetic', icon: '⋂' },
-  { id: 'Round', label: 'Circular / Round', desc: 'Classic balanced flow', icon: '◯' },
-  { id: 'Rectangle', label: 'Modern Rectangle', desc: 'Traditional clean borders', icon: '▭' },
-  { id: 'Hexagon', label: 'Hexagon', desc: 'Geometric honeycomb look', icon: '⬡' },
-  { id: 'Agate Edge', label: 'Raw Agate Edge', desc: 'Organic gilded gold borders', icon: '〰' },
+  { id: 'Arch', label: 'Elegant Arch', desc: 'Curved top silhouette' },
+  { id: 'Round', label: 'Circular / Round', desc: 'Classic balanced flow' },
+  { id: 'Rectangle', label: 'Modern Rectangle', desc: 'Clean geometric borders' },
+  { id: 'Hexagon', label: 'Hexagon', desc: 'Honeycomb statement look' },
+  { id: 'Agate Edge', label: 'Raw Agate Edge', desc: 'Organic gilded gold borders' },
 ];
 
 const COLOR_PALETTES = [
@@ -170,7 +173,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  {PRODUCT_TYPES.map((pt) => {
+                  {PRODUCT_TYPES.map((pt, idx) => {
                     const isSelected = orderData.productType === pt.id || orderData.productType.includes(pt.id);
                     return (
                       <button
@@ -183,8 +186,10 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                             : 'bg-white hover:bg-artisan-cream border-artisan-border'
                         }`}
                       >
-                        <span className="text-2xl shrink-0 mt-0.5">{pt.icon}</span>
-                        <div>
+                        <span className="text-xs font-bold font-mono text-artisan-terracotta bg-white px-2 py-1 rounded-md border border-artisan-border shrink-0 mt-0.5">
+                          0{idx + 1}
+                        </span>
+                        <div className="flex-1">
                           <div className="flex items-center gap-1.5">
                             <h4 className="font-serif text-sm font-bold text-artisan-charcoal">{pt.label}</h4>
                             {isSelected && <Check className="w-3.5 h-3.5 text-artisan-terracotta ml-auto shrink-0" />}
@@ -255,9 +260,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                             : 'bg-white hover:bg-artisan-cream border-artisan-border'
                         }`}
                       >
-                        <span className="text-xl font-bold font-serif text-artisan-terracotta shrink-0 mt-0.5 w-6 text-center">
-                          {sh.icon}
-                        </span>
+                        <div className="w-2.5 h-2.5 rounded-full bg-artisan-terracotta shrink-0 mt-1.5" />
                         <div className="flex-1">
                           <div className="flex items-center justify-between">
                             <h4 className="font-serif text-sm font-bold text-artisan-charcoal">{sh.label}</h4>
@@ -397,7 +400,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
               <div className="space-y-5 animate-in fade-in duration-200">
                 <div>
                   <h3 className="font-serif text-xl sm:text-2xl font-bold text-artisan-charcoal">
-                    Almost Ready to Connect ✨
+                    Almost Ready to Connect
                   </h3>
                   <p className="text-xs sm:text-sm text-artisan-muted mt-1">
                     Enter your contact details and optionally upload an inspiration reference image.
@@ -455,7 +458,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                           <p className="text-xs font-bold text-artisan-charcoal truncate max-w-[200px]">
                             {orderData.referenceImageName || 'Reference Image Attached'}
                           </p>
-                          <p className="text-[10px] text-emerald-700 font-medium">✓ Photo ready for preview</p>
+                          <p className="text-[10px] text-emerald-700 font-medium">Photo ready for preview</p>
                         </div>
                       </div>
                     ) : (
@@ -471,7 +474,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                     )}
                   </div>
                   <p className="text-[11px] text-artisan-muted mt-1.5 flex items-center gap-1">
-                    <span>💡 <em>Tip:</em> You can also directly attach your inspiration photo in the WhatsApp chat!</span>
+                    <span>Note: You can also directly attach your inspiration photo in the WhatsApp chat.</span>
                   </p>
                 </div>
 
@@ -568,7 +571,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
               {orderData.hasReferenceImage && (
                 <div className="flex justify-between py-1 border-b border-dashed border-artisan-border text-emerald-700">
                   <span className="font-sans font-medium">Reference:</span>
-                  <span className="font-sans">✓ Photo Attached</span>
+                  <span className="font-sans">Photo Attached</span>
                 </div>
               )}
             </div>
@@ -587,7 +590,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
             {/* Custom Request Ready status */}
             <div className="text-center pb-3">
               <span className="text-xs font-semibold text-artisan-terracotta">
-                Your custom request is ready ✨
+                Your custom request is ready
               </span>
             </div>
 
@@ -602,7 +605,7 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
 
             <div className="space-y-1 text-center mt-3">
               <p className="text-[11px] text-artisan-muted">
-                💡 You'll be able to attach your reference image directly in WhatsApp.
+                You will be able to attach your reference image directly in WhatsApp.
               </p>
               <div className="flex items-center justify-center gap-1 text-[10px] text-artisan-muted">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />

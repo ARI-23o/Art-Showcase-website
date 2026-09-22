@@ -160,42 +160,42 @@ export default function Navbar({ onOpenCustomStudio, onNavigateSection }) {
                 onClick={() => handleNavClick('occasions')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>💍 Made For Your Moments</span>
+                <span>Made For Your Moments</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
               <button
                 onClick={() => handleNavClick('categories')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>🎨 Product Categories</span>
+                <span>Product Categories</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
               <button
                 onClick={() => handleNavClick('creations')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>⭐ Best Selling Creations</span>
+                <span>Featured Creations</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
               <button
                 onClick={() => handleNavClick('process')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>✨ 4-Step Craft Journey</span>
+                <span>Craft Journey</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
               <button
                 onClick={() => handleNavClick('gallery')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>📸 Instagram Gallery</span>
+                <span>Instagram Gallery</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
               <button
                 onClick={() => handleNavClick('about')}
                 className="text-left text-artisan-charcoal hover:text-artisan-terracotta py-1 flex items-center justify-between"
               >
-                <span>🌸 About Yukti</span>
+                <span>About Yukti</span>
                 <ArrowRight className="w-4 h-4 text-artisan-muted" />
               </button>
             </div>

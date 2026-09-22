@@ -10,7 +10,7 @@ export default function OccasionExplorer({ activeOccasion, onSelectOccasion, onC
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-artisan-terracotta mb-2">
-            <span>Organized By Emotion</span>
+            <span>Organized By Moment</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold text-artisan-charcoal">
             Made For Your Moments
@@ -28,15 +28,22 @@ export default function OccasionExplorer({ activeOccasion, onSelectOccasion, onC
               <button
                 key={occ.id}
                 onClick={() => onSelectOccasion(occ.id)}
-                className={`relative group p-3 sm:p-4 rounded-2xl text-left transition-all duration-300 flex flex-col justify-between border ${
+                className={`relative group p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 flex flex-col justify-between border ${
                   isActive
-                    ? 'bg-white border-artisan-terracotta shadow-soft scale-[1.03] ring-2 ring-artisan-terracotta/20'
+                    ? 'bg-white border-artisan-terracotta shadow-soft scale-[1.02] ring-2 ring-artisan-terracotta/20'
                     : 'bg-white/80 hover:bg-white border-artisan-border hover:border-artisan-terracotta/40 shadow-sm'
                 }`}
               >
                 <div>
-                  <div className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform">
-                    {occ.icon}
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-artisan-muted group-hover:text-artisan-terracotta transition-colors">
+                      Curated
+                    </span>
+                    {isActive ? (
+                      <span className="w-2 h-2 rounded-full bg-artisan-terracotta" />
+                    ) : (
+                      <span className="w-1.5 h-1.5 rounded-full bg-artisan-border group-hover:bg-artisan-terracotta/40 transition-colors" />
+                    )}
                   </div>
                   <h3 className={`font-serif text-sm sm:text-base font-bold ${
                     isActive ? 'text-artisan-terracotta' : 'text-artisan-charcoal'
@@ -46,13 +53,9 @@ export default function OccasionExplorer({ activeOccasion, onSelectOccasion, onC
                 </div>
 
                 {occ.tag && (
-                  <span className="text-[10px] text-artisan-muted font-medium mt-2 block truncate">
+                  <span className="text-[10px] text-artisan-muted font-medium mt-3 block truncate">
                     {occ.tag}
                   </span>
-                )}
-
-                {isActive && (
-                  <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-artisan-terracotta" />
                 )}
               </button>
             );

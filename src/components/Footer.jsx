@@ -98,27 +98,27 @@ export default function Footer({ onNavigateSection, onCustomOrderClick }) {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button onClick={() => onNavigateSection('occasions')} className="hover:text-artisan-terracotta-light transition-colors">
-                  💍 Wedding Memories
+                  Wedding Memories
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection('occasions')} className="hover:text-artisan-terracotta-light transition-colors">
-                  🏠 Housewarming Entrance
+                  Housewarming Entrance
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection('occasions')} className="hover:text-artisan-terracotta-light transition-colors">
-                  🎁 Anniversary Keepsakes
+                  Anniversary Keepsakes
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection('occasions')} className="hover:text-artisan-terracotta-light transition-colors">
-                  🪔 Festivals & Celebrations
+                  Festivals & Celebrations
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigateSection('occasions')} className="hover:text-artisan-terracotta-light transition-colors">
-                  👶 Baby Milestones
+                  Baby Milestones
                 </button>
               </li>
             </ul>

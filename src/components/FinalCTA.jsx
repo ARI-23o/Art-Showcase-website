@@ -17,7 +17,7 @@ export default function FinalCTA({ onCustomOrderClick }) {
         </div>
 
         <h2 className="font-serif text-3xl sm:text-5xl font-bold text-artisan-charcoal tracking-tight">
-          Let's Create Something Meaningful. ✨
+          Let's Create Something Meaningful.
         </h2>
 
         <p className="text-base sm:text-lg text-artisan-muted max-w-xl mx-auto font-normal">

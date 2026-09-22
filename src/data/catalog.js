@@ -1,4 +1,4 @@
-// Catalog data for HandiCrafts by Yukti Demo (Verified & Curated)
+// Catalog data for HandiCrafts by Yukti Demo (Verified & Curated - Zero Emoji)
 
 export const BUSINESS_INFO = {
   name: "HandiCrafts by Yukti",
@@ -11,13 +11,13 @@ export const BUSINESS_INFO = {
 };
 
 export const OCCASIONS = [
-  { id: "all", label: "All Creations", icon: "✨" },
-  { id: "weddings", label: "Weddings", icon: "💍", tag: "Varmala & Keepsakes" },
-  { id: "anniversaries", label: "Anniversaries", icon: "🎁", tag: "Couple Frames" },
-  { id: "housewarming", label: "Housewarming", icon: "🏠", tag: "Name Plates & Clocks" },
-  { id: "birthdays", label: "Birthdays", icon: "❤️", tag: "Personalized Gifts" },
-  { id: "festivals", label: "Festivals", icon: "🪔", tag: "Hampers & Trays" },
-  { id: "baby", label: "Baby & Family", icon: "👶", tag: "Memory Keepsakes" },
+  { id: "all", label: "All Creations", tag: "Complete Portfolio" },
+  { id: "weddings", label: "Weddings", tag: "Varmala & Keepsakes" },
+  { id: "anniversaries", label: "Anniversaries", tag: "Couple Frames" },
+  { id: "housewarming", label: "Housewarming", tag: "Name Plates & Clocks" },
+  { id: "birthdays", label: "Birthdays", tag: "Personalized Gifts" },
+  { id: "festivals", label: "Festivals", tag: "Hampers & Trays" },
+  { id: "baby", label: "Baby & Family", tag: "Memory Keepsakes" },
 ];
 
 export const CATEGORIES = [
@@ -227,25 +227,21 @@ export const CRAFTING_STEPS = [
     step: "01",
     title: "Share Your Idea",
     description: "Tell us the occasion, product type, names, dates, or color palette you envision — or send us reference inspiration on WhatsApp.",
-    icon: "💡"
   },
   {
     step: "02",
     title: "Finalize Your Design",
     description: "We discuss dimensions, flower preservation details, lettering, and resin tones to confirm everything exactly how you want it.",
-    icon: "🎨"
   },
   {
     step: "03",
     title: "Handcrafted With Care",
     description: "Each piece is slowly cast, cured in layers with real florals/gold leaf, and hand-polished with artisan attention.",
-    icon: "✨"
   },
   {
     step: "04",
     title: "Carefully Packed & Delivered",
     description: "Multi-layered protective packaging ensures your personalized creation reaches you in perfect condition.",
-    icon: "📦"
   }
 ];
 
@@ -253,37 +249,37 @@ export const INSTAGRAM_POSTS = [
   {
     id: "post-1",
     image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
-    caption: "Wedding flower preservation in crystal clear resin 🌸💍",
+    caption: "Wedding flower preservation in crystal clear resin",
     tag: "#VarmalaPreservation"
   },
   {
     id: "post-2",
     image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
-    caption: "Personalized home entrance name plate with gold accents 🌿✨",
+    caption: "Personalized home entrance name plate with gold accents",
     tag: "#ResinNamePlate"
   },
   {
     id: "post-3",
     image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=600&q=80",
-    caption: "Handmade ocean wave resin wall clock 🌊🕒",
+    caption: "Handmade ocean wave resin wall clock",
     tag: "#ResinClock"
   },
   {
     id: "post-4",
     image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
-    caption: "Agate edge serving tray with gilded gold handles 🥂",
+    caption: "Agate edge serving tray with gilded gold handles",
     tag: "#ResinTray"
   },
   {
     id: "post-5",
     image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
-    caption: "Curating bespoke celebration gift hampers & favors 🎁✨",
+    caption: "Curating bespoke celebration gift hampers & favors",
     tag: "#PersonalizedHampers"
   },
   {
     id: "post-6",
     image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80",
-    caption: "Fluid resin geode art with raw crystal quartz points 💎",
+    caption: "Fluid resin geode art with raw crystal quartz points",
     tag: "#GeodeArt"
   }
 ];
@@ -310,27 +306,27 @@ export const FAQS = [
 export const WHATSAPP_QUICK_ACTIONS = [
   {
     id: "wedding",
-    label: "💍 Customize a Wedding Frame",
+    label: "Customize a Wedding Frame",
     message: "Hi Yukti! I am interested in customizing a Wedding Frame / Flower Preservation. Could you share available options?"
   },
   {
     id: "nameplate",
-    label: "🏠 Create a Name Plate",
+    label: "Create a Name Plate",
     message: "Hi Yukti! I'd like to create a personalized Resin Name Plate for our home. Can you share design styles?"
   },
   {
     id: "hamper",
-    label: "🎁 Design a Gift Hamper",
+    label: "Design a Gift Hamper",
     message: "Hi Yukti! I am looking for personalized gift hampers for an upcoming occasion. Can we discuss ideas?"
   },
   {
     id: "order-status",
-    label: "📦 Ask About an Existing Order",
+    label: "Ask About an Existing Order",
     message: "Hi Yukti! I would like to check the status of my custom order."
   },
   {
     id: "chat",
-    label: "💬 Talk to Yukti",
+    label: "Talk to Yukti",
     message: "Hi Yukti! I saw your creations on the website and have a custom idea in mind. Would love to discuss!"
   }
 ];

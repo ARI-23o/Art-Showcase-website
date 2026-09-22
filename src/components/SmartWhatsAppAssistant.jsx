@@ -46,7 +46,7 @@ export default function SmartWhatsAppAssistant() {
             </div>
 
             <p className="text-xs text-emerald-100 mt-2.5 leading-relaxed bg-white/10 rounded-xl p-2.5">
-              👋 Hi there! Looking for something special? Choose an option below to start your WhatsApp inquiry:
+              Hi there! Looking for something special? Choose an option below to start your WhatsApp inquiry:
             </p>
           </div>
 
