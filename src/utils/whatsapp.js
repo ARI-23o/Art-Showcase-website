@@ -27,10 +27,11 @@ Could you please share more details and how we can personalize this for me?`;
   return createWhatsAppUrl(text);
 }
 
-/**
- * Generate WhatsApp message for Custom Order Studio
- */
 export function generateCustomOrderMessage(orderData) {
+  const referenceText = orderData.hasReferenceImage
+    ? `* Reference Photo: Yes (${orderData.referenceImageName || 'Reference image'} - Attaching photo right below this message!)`
+    : `* Reference Photo: None / Discussing in chat`;
+
   const text = `Hi Yukti! I would love to place a *Custom Order* with HandiCrafts by Yukti:
 
 * CUSTOM ORDER INQUIRY *
@@ -42,8 +43,9 @@ export function generateCustomOrderMessage(orderData) {
 * Date / Quote: ${orderData.dateOrQuote || 'N/A'}
 * Color Palette: ${orderData.palette || 'Artist Choice'}
 * Preferred Budget: ${orderData.budget || 'Open for recommendation'}
-* Customer WhatsApp: ${orderData.whatsappNumber || 'This number'}
-${orderData.hasReferenceImage ? `* Reference Photo: (I will attach my reference image in this chat)\n` : ''}
+* Customer Name: ${orderData.customerName || 'Customer'}
+* Customer Contact: ${orderData.whatsappNumber || 'This WhatsApp number'}
+${referenceText}
 ------------------------------------
 Looking forward to discussing the design and finalizing with you!`;
 

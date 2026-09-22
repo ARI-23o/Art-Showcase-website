@@ -12,7 +12,10 @@ import {
   Clock,
   Layers,
   Palette,
-  Gift
+  Gift,
+  Info,
+  Copy,
+  Trash2
 } from 'lucide-react';
 import { generateCustomOrderMessage } from '../utils/whatsapp';
 
@@ -73,7 +76,9 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
     hasReferenceImage: false,
     referenceImageName: '',
     referenceImagePreview: null,
+    imageBlob: null,
   });
+  const [copiedImageAlert, setCopiedImageAlert] = useState(false);
 
   const totalSteps = 6;
 
@@ -91,9 +96,36 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
           hasReferenceImage: true,
           referenceImageName: file.name,
           referenceImagePreview: reader.result,
+          imageBlob: file,
         }));
       };
       reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemoveImage = (e) => {
+    e.stopPropagation();
+    setOrderData(prev => ({
+      ...prev,
+      hasReferenceImage: false,
+      referenceImageName: '',
+      referenceImagePreview: null,
+      imageBlob: null,
+    }));
+  };
+
+  const handleCopyImageToClipboard = async (e) => {
+    if (e) e.stopPropagation();
+    if (orderData.imageBlob && navigator.clipboard && window.ClipboardItem) {
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({ [orderData.imageBlob.type || 'image/png']: orderData.imageBlob })
+        ]);
+        setCopiedImageAlert(true);
+        setTimeout(() => setCopiedImageAlert(false), 3000);
+      } catch (err) {
+        console.log('Clipboard copy note', err);
+      }
     }
   };
 
@@ -109,7 +141,17 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
     }
   };
 
-  const handleSendWhatsApp = () => {
+  const handleSendWhatsApp = async () => {
+    // Attempt to copy image to clipboard so user can easily paste (Ctrl+V) into WhatsApp Web
+    if (orderData.imageBlob && navigator.clipboard && window.ClipboardItem) {
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({ [orderData.imageBlob.type || 'image/png']: orderData.imageBlob })
+        ]);
+      } catch (e) {
+        // Fallback gracefully
+      }
+    }
     const url = generateCustomOrderMessage(orderData);
     window.open(url, '_blank');
   };
@@ -438,28 +480,55 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                   <label className="text-xs font-semibold text-artisan-charcoal block mb-1.5">
                     Upload Reference / Inspiration Photo (Optional):
                   </label>
-                  <div className="border-2 border-dashed border-artisan-border rounded-2xl p-4 text-center bg-artisan-cream/40 hover:bg-artisan-cream/80 transition-colors relative">
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleImageMockUpload}
-                      className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
-                    />
-                    {orderData.referenceImagePreview ? (
-                      <div className="flex items-center justify-center gap-3">
+                  
+                  {orderData.referenceImagePreview ? (
+                    <div className="p-4 rounded-2xl bg-artisan-cream/80 border border-artisan-terracotta/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                      <div className="flex items-center gap-3.5">
                         <img 
                           src={orderData.referenceImagePreview} 
                           alt="Reference preview" 
-                          className="w-14 h-14 object-cover rounded-xl border border-artisan-border" 
+                          className="w-16 h-16 object-cover rounded-xl border border-artisan-border shadow-sm" 
                         />
-                        <div className="text-left">
-                          <p className="text-xs font-bold text-artisan-charcoal truncate max-w-[200px]">
-                            {orderData.referenceImageName || 'Reference Image Attached'}
+                        <div>
+                          <p className="text-xs font-bold text-artisan-charcoal truncate max-w-[220px]">
+                            {orderData.referenceImageName || 'Reference Photo Attached'}
                           </p>
-                          <p className="text-[10px] text-emerald-700 font-medium">Photo ready for preview</p>
+                          <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-semibold mt-0.5">
+                            <Check className="w-3 h-3" />
+                            <span>Image ready</span>
+                          </span>
                         </div>
                       </div>
-                    ) : (
+
+                      <div className="flex items-center gap-2 w-full sm:w-auto">
+                        <button
+                          type="button"
+                          onClick={handleCopyImageToClipboard}
+                          className="flex-1 sm:flex-none px-3 py-1.5 rounded-lg bg-white hover:bg-artisan-sand text-artisan-charcoal border border-artisan-border text-[11px] font-medium flex items-center justify-center gap-1 transition-colors"
+                          title="Copy image to clipboard"
+                        >
+                          <Copy className="w-3 h-3 text-artisan-terracotta" />
+                          <span>{copiedImageAlert ? 'Copied!' : 'Copy Image'}</span>
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={handleRemoveImage}
+                          className="p-1.5 rounded-lg text-rose-600 hover:bg-rose-50 border border-rose-200 transition-colors"
+                          title="Remove image"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="border-2 border-dashed border-artisan-border rounded-2xl p-5 text-center bg-artisan-cream/40 hover:bg-artisan-cream/80 transition-colors relative">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageMockUpload}
+                        className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+                      />
                       <div className="flex flex-col items-center justify-center py-2">
                         <ImageIcon className="w-8 h-8 text-artisan-terracotta/70 mb-1" />
                         <p className="text-xs font-medium text-artisan-charcoal">
@@ -469,11 +538,19 @@ export default function CustomOrderStudio({ preselectedProduct, initialData }) {
                           PNG, JPG up to 10MB
                         </p>
                       </div>
-                    )}
+                    </div>
+                  )}
+
+                  {/* Informational Guidance Box */}
+                  <div className="mt-3 p-3.5 bg-artisan-cream/70 border border-artisan-border rounded-xl text-[11px] text-artisan-charcoal/80 flex items-start gap-2.5">
+                    <Info className="w-4 h-4 text-artisan-terracotta shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold block text-artisan-charcoal">How photo sharing works on WhatsApp:</span>
+                      <span className="text-artisan-muted leading-relaxed">
+                        WhatsApp web and mobile links automatically pre-fill your complete custom design specifications. When WhatsApp opens, simply paste (<kbd className="font-mono bg-white px-1 py-0.5 rounded border border-artisan-border text-[10px]">Ctrl+V</kbd>) or tap the attachment icon in WhatsApp to send your photo directly to Yukti!
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-[11px] text-artisan-muted mt-1.5 flex items-center gap-1">
-                    <span>Note: You can also directly attach your inspiration photo in the WhatsApp chat.</span>
-                  </p>
                 </div>
 
               </div>
